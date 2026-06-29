@@ -63,6 +63,10 @@ execution:
     - "Paper Search:download_iacr"
     # AlphaGenome predictor - requires API key that is not provided
     - "BioMCP:alphagenome_predictor"
+    - "BioMCP:nci_organization"
+    - "BioMCP:nci_intervention"
+    - "BioMCP:nci_biomarker"
+    - "BioMCP:nci_disease"
   
   # Content summary token threshold
   content_summary_threshold: 1000
