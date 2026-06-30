@@ -21,7 +21,7 @@ MCP-Bench 原本是一个用于评测大模型工具使用能力的 benchmark。
 - 支持任意 **OpenAI 兼容端点**，方便接入 vLLM、TGI、Ollama、LM Studio、DashScope、硅基流动等自定义模型。
 - 每次对话自动保存到 `sessions/<session_id>.json`，方便后续复盘和分析。
 
-> 底层的多轮规划和执行逻辑继承自 MCP-Bench 原生的 `TaskExecutor`。每轮规划时会把当前已连接的所有 tool 描述都输入给 LLM，这是 benchmark 本身的设计。日常使用中建议只连接相关 Server，否则上下文和 token 消耗会很大。
+> 底层的多轮规划和执行逻辑继承自 MCP-Bench 原生的 `TaskExecutor`。每轮规划时会把当前已连接的所有 tool 描述都输入给 LLM，这是 benchmark 本身的设计。
 
 ---
 
@@ -129,7 +129,7 @@ python chat_with_agent.py --model gpt-4o
 # 使用 .env 中配置的直接端点
 python chat_with_agent.py
 
-# 只连接部分 Server，加快响应并降低 token 消耗
+# 只连接部分 Server
 python chat_with_agent.py --servers "Wikipedia,FruityVice,Paper Search"
 
 # 设置每轮超时（默认 300 秒）
