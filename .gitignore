@@ -55,3 +55,10 @@ Thumbs.db
 *.tmp
 *.temp
 .cache/
+
+# Runtime artifacts from chat interfaces
+sessions/
+cache/
+mcp_info_collection.log
+mcp_servers_info.json
+mcp_servers_info.md
