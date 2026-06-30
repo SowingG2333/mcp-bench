@@ -255,7 +255,7 @@ mcp-bench/
 
 ## 使用建议
 
-- **日常使用时减少 Server 数量。** 连接全部 28 个 Server 会把约 250 个 tool 描述塞进每轮规划 prompt，速度慢且 token 消耗大。大多数任务只需 3–6 个相关 Server。
+- **可根据场景调整 Server 数量。** 连接全部 28 个 Server 会把约 250 个 tool 描述塞进每轮规划 prompt，速度慢且 token 消耗大。如果设定具体场景，可以只保留相关 Server。
 - **通过 GUI 的 Execution Trace 观察 Agent 行为。** 可以清楚看到每轮调用了哪些工具、参数和结果。
 - **`TaskExecutor` 未做改动。** 它针对 benchmark 评测设计，而非日常效率。如果需要更快、更便宜的运行，建议只选相关 Server，或自行修改 `agent/executor.py` 增加 tool 预筛选。
 
